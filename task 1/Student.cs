@@ -7,13 +7,13 @@
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
-        public decimal Grade { get; set; }
+        public decimal FinalGrade { get; set; }
         public Student(string name, string surname, int age, decimal grade)
         {
             Name = name;
             Surname = surname;
             Age = age;
-            Grade = grade;
+            FinalGrade = grade;
             Id = id++;
         }
     }

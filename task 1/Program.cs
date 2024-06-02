@@ -106,6 +106,51 @@ public static class Program
                         }
                         break;
                     case (int)Menu.AddStudent:
+                        Console.WriteLine("name of the group");
+                        string wantedGroupName = Console.ReadLine();
+                        var currentGroup = course.Groups.FirstOrDefault(g => g.Name == wantedGroupName);
+                        if (currentGroup == null)
+                        {
+                            Console.WriteLine("Group not found.");
+                            return;
+                        }
+                        Console.WriteLine("Name of the student");
+                        string sName = Console.ReadLine();
+                        Console.WriteLine("Surname of the student");
+                        string Surname = Console.ReadLine();
+                        Console.WriteLine("age of the student");
+                        int Age = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Final grade of the student");
+                        decimal FinalGrade = Convert.ToDecimal(Console.ReadLine());
+                        var newStudent = new Student(sName, Surname, Age, FinalGrade);
+                        currentGroup.Students.Add(newStudent);
+                        break;
+                    case (int)Menu.ListOfStudentsInCourse:
+                        foreach (var group in course.Groups)
+                        {
+                            foreach (var student in group.Students)
+                            {
+                                Console.WriteLine(student.Name, student.Surname, student.Age, student.FinalGrade);
+                            }
+                        }
+                        break;
+                    case (int)Menu.ListOfStudentsInGroup:
+                        Console.WriteLine("Group id");
+                        int ID = Convert.ToInt32(Console.ReadLine());
+                        currentGroup = course.Groups.FirstOrDefault(g => g.Id == ID);
+                        foreach (var student in currentGroup.Students)
+                        {
+                            Console.WriteLine(student.Name, student.Surname, student.Age, student.FinalGrade);
+                        }
+                        break;
+                    case (int)Menu.DeleteStudent:
+                        Console.WriteLine("Student id");
+                        int studentId = Convert.ToInt32(Console.ReadLine());    
+                        foreach (var group in course.Groups)
+                        {
+                            var student = group.Students.FirstOrDefault(s => s.Id == studentId);
+                            group.Students.Remove(student);
+                        }
                         break;
                 }
             }

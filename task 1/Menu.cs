@@ -10,8 +10,6 @@
         AddStudent,
         ListOfStudentsInCourse,
         ListOfStudentsInGroup,
-        SearchStudent,
         DeleteStudent,
-        EditStudent,
     }
 }
