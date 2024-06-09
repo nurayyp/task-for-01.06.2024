@@ -5,14 +5,13 @@
         private static int id = 1;
         public int Id { get; set; }  
         public string Name { get; set; }
-        public List<Student> Students { get; set; }
+        public CustomList<Student> Students = new CustomList<Student>();
         public Group(string name)
         {   
             Name = name;
             Id = id++ ;
-            Students = new List<Student>();
         }
-        public void GetDetails()
+        public void GetGroupDetails()
         {
             Console.WriteLine($"Group Name - {Id}, {Name}");
         }

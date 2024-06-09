@@ -14,7 +14,12 @@
             Surname = surname;
             Age = age;
             FinalGrade = grade;
+            Id = id;
             Id = id++;
+        }
+        public void GetStudentDetails()
+        {
+            Console.WriteLine($"{Id} - {Name} {Surname} {Age} - {FinalGrade}");
         }
     }
 }
