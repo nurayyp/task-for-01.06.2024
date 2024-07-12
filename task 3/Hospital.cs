@@ -1,4 +1,6 @@
-﻿namespace task_3
+﻿using System.Text.RegularExpressions;
+
+namespace task_3
 {
     internal class Hospital
     {

@@ -5,7 +5,7 @@
         private static int id = 1;
         public int Id { get; set; }
         public string Name { get; set; }
-        public CustomList<Group> Groups = new CustomList<Group>();
+        public List<Group> Groups = new List<Group>();
         public Course(string name)
         {
             Id = id++;
