@@ -1,0 +1,1 @@
+task 1 de eslinde deyisiklik yox idi sadece muqayiseli isleyende ola biler neyese elim deyib ona gore ora da changed getdi (( amma task 1 ve 2 eyni qalib onlari sizin dersde yazdiginiza esasen yazmisdi,
